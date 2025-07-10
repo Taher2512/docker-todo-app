@@ -2,6 +2,8 @@ FROM oven/bun:1
 
 WORKDIR /usr/src/app
 
+RUN apk add --no-cache openssl
+
 COPY ./packages ./packages
 COPY ./bun.lock ./bun.lock
 
