@@ -2,7 +2,8 @@ FROM oven/bun:1
 
 WORKDIR /usr/src/app
 
-RUN apk add --no-cache openssl
+RUN apt-get update
+RUN apt-get install -y openssl
 
 COPY ./packages ./packages
 COPY ./bun.lock ./bun.lock
